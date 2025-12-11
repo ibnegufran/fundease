@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand */
+  --color-primary: #00b2f8;              /* FundEase blue */
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #f2f2f2;            /* Light grey for sections */
+  --color-secondary-foreground: #020617; /* Near-black text */
+
+  /* Backgrounds */
+  --color-background: #ffffff;
+  --color-muted: #e5f6ff;                /* Soft blue background */
+  --color-card: #ffffff;
+
+  /* Borders & text helpers */
+  --color-border: #e5e7eb;
+  --color-accent: #10b981;               /* Green for success badges */
+
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+.inp {
+  @apply w-full bg-secondary px-3 py-2 rounded-lg text-sm outline-none border border-transparent focus:border-primary;
+}
+.hero-img{
+  mix-blend-mode: multiply;
+}
+
