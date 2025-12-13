@@ -148,7 +148,7 @@ function MobileAuth({ isSignIn, setIsSignIn, role, setRole }) {
                   : "text-gray-600"
               }`}
             >
-              Organizer
+              Organizer 
             </button>
             <button
               onClick={() => setRole("admin")}
