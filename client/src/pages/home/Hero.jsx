@@ -21,7 +21,7 @@ const Hero = () => {
         {/* Right Image */}
         <div className="flex-1">
           <img
-            src="/src/assets/hero3.png"
+            src="./images/hero-image.png"
             alt="FundEase Hero"
             className=" w-full rounded-full hero-img"
           />
