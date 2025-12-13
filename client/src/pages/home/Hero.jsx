@@ -1,5 +1,5 @@
 import React from "react";
-// import img from "./src/pu"
+// import img from "./src/public/images/hero.png";
 const Hero = () => {
   return (
     <section className="w-full md:h-[90vh] bg-white  py-20 md:pb-0 px-6">
@@ -23,7 +23,7 @@ const Hero = () => {
         {/* Right Image */}
         <div className="flex-1">
           <img
-            src="../images/hero-image.png"
+            src="../images/hero3.png"
             alt="FundEase Hero"
             className=" w-full rounded-full hero-img"
           />
