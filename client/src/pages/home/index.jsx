@@ -5,6 +5,8 @@ import Events from "./Events";
 import Hero from "./Hero";
 
 const Home = () => {
+  console.log(import.meta.env.VITE_API_BASE_URL);
+
   return (
     <div className="font-sans bg-secondary min-h-screen">
       <Hero />
