@@ -16,7 +16,7 @@ const Hero = () => {
             fund submissions, and admin approvals.
           </p>
 
-          <Link to="/events" className="mt-6 px-6 py-3 bg-primary text-white rounded-lg shadow-md hover:opacity-90">
+          <Link to="/events" className="mt-6 inline-block px-6 py-3 bg-primary text-white rounded-lg shadow-md hover:opacity-90">
             Get Started
           </Link>
         </div>
