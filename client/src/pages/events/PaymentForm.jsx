@@ -1,5 +1,6 @@
 // src/components/PaymentForm.jsx
 import { useState } from "react";
+import QRCode from "react-qr-code";
 
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://localhost:8080/api";
@@ -250,9 +251,31 @@ export default function EventPaymentForm({
             </p>
 
             {/* Future: react-qr-code yaha use kar sakte ho */}
-            <div className="w-36 h-36 flex items-center justify-center border border-dashed border-gray-300 rounded-lg text-[10px] text-gray-400">
-              QR Preview (use react-qr-code)
-            </div>
+            <div className="rounded-xl bg-white px-3 py-3 border text-[11px] flex flex-col items-center">
+  <p className="font-semibold text-primary mb-2">
+    Scan QR with any UPI app
+  </p>
+
+  {upiUrl ? (
+    <div className="bg-white p-2 rounded">
+      <QRCode
+        value={upiUrl}
+        size={150}
+        bgColor="#ffffff"
+        fgColor="#000000"
+      />
+    </div>
+  ) : (
+    <div className="w-36 h-36 flex items-center justify-center text-gray-400">
+      QR not available
+    </div>
+  )}
+
+  <p className="mt-2 text-[10px] text-gray-500 text-center">
+    Open your UPI app and scan this QR to complete payment.
+  </p>
+</div>
+
 
             <p className="mt-2 text-[10px] text-gray-500 text-center">
               On desktop, open this page and scan the QR using your mobile UPI
