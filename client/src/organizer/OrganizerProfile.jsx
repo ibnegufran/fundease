@@ -16,7 +16,7 @@ export default function OrganizerProfile() {
     });
 
     if (res.ok) {
-      alert("Updated!");
+      toast.success("Updated!");
       user.upiId = upiId;
       localStorage.setItem("fundeaseOrganizer", JSON.stringify(user));
     }

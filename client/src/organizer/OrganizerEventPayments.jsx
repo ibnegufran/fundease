@@ -1,5 +1,6 @@
 // src/organizer/OrganizerEventPayments.jsx
 import { useEffect, useMemo, useState } from "react";
+import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
 
 const API = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080/api";
@@ -102,7 +103,7 @@ export default function OrganizerEventPayments() {
       await loadPayments();
     } catch (err) {
       console.error("updateStatus error:", err);
-      alert(err.message || "Could not update status");
+      toast.error(err.message || "Could not update status");
       await loadPayments();
     } finally {
       setUpdating(null);

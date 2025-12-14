@@ -1,5 +1,6 @@
 // src/organizer/OrganizerDashboard.jsx
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const API = import.meta.env.VITE_API_BASE_URL;
 
@@ -18,6 +19,8 @@ export default function OrganizerDashboard() {
         setStats(data);
       } catch (err) {
         console.error("Dashboard fetch error", err);
+        toast.error("Dashboard fetch error");
+
       } finally {
         setLoading(false);
       }

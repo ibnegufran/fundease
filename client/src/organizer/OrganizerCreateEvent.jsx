@@ -1,5 +1,6 @@
 // src/organizer/OrganizerCreateEvent.jsx
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const API = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080/api";
 
@@ -26,7 +27,7 @@ export default function OrganizerCreateEvent() {
     e.preventDefault();
 
     if (!form.name || !form.date || !form.venue || !form.minAmount) {
-      alert("Please fill Event Name, Date, Venue and Minimum Amount.");
+      toast.success("Please fill Event Name, Date, Venue and Minimum Amount.");
       return;
     }
 
@@ -54,7 +55,7 @@ export default function OrganizerCreateEvent() {
         throw new Error(data.message || "Failed to create event");
       }
 
-      alert("Event created!");
+      toast.success("Event created!");
       // optional: form reset
       setForm({
         name: "",
@@ -68,7 +69,7 @@ export default function OrganizerCreateEvent() {
       });
     } catch (err) {
       console.error(err);
-      alert(err.message);
+      toast.error(err.message);
     }
   };
 

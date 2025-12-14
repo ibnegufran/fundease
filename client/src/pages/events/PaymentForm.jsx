@@ -39,7 +39,7 @@ export default function EventPaymentForm({
       !form.mobile ||
       !form.amount
     ) {
-      alert("Please fill all required fields.");
+      toast.success("Please fill all required fields.");
       return;
     }
 
@@ -81,7 +81,7 @@ export default function EventPaymentForm({
       setStep(2);
     } catch (err) {
       console.error(err);
-      alert(err.message || "Something went wrong. Please try again.");
+      toast.success(err.message || "Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -289,7 +289,7 @@ export default function EventPaymentForm({
               type="button"
               onClick={() => {
                 navigator.clipboard.writeText(organizerUpiId);
-                alert("UPI ID copied!");
+                toast.success("UPI ID copied!");
               }}
               className="rounded-lg border px-3 py-2 hover:border-primary hover:text-primary text-left"
             >
@@ -299,7 +299,7 @@ export default function EventPaymentForm({
               type="button"
               onClick={() => {
                 navigator.clipboard.writeText(upiUrl);
-                alert("UPI link copied!");
+                toast.success("UPI link copied!");
               }}
               className="rounded-lg border px-3 py-2 hover:border-primary hover:text-primary text-left"
             >

@@ -1,5 +1,6 @@
 // src/pages/OrganizerAuth.jsx
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const API_BASE_URL =
@@ -241,7 +242,7 @@ function SignInForm({ compact, role }) {
       // save in localStorage
       localStorage.setItem("fundeaseOrganizer", JSON.stringify(user));
 
-      alert("Login successful!");
+      toast.success("Login successful!");
       navigate("/organizer/dashboard");
       }
      
@@ -369,7 +370,7 @@ function SignUpForm({ compact, onSignUpSuccess, role }) {
       }
 
       // Signup successful: slide to Sign In
-      alert("Registration successful! Please sign in.");
+      toast.success("Registration successful! Please sign in.");
       if (onSignUpSuccess) onSignUpSuccess();
 
       // reset fields

@@ -18,7 +18,7 @@ import OrganizerEvents from './organizer/OrganizerEvents.jsx'
 import OrganizerCreateEvent from './organizer/OrganizerCreateEvent.jsx'
 import OrganizerEventPayments from './organizer/OrganizerEventPayments.jsx'
 import OrganizerProfile from './organizer/OrganizerProfile.jsx'
-
+import { Toaster } from "react-hot-toast";
 
 
 // Admin pages
@@ -75,5 +75,22 @@ export default router;
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}/>
+    <Toaster
+      position="top-right"
+      toastOptions={{
+  style: {
+    background: "#ffffff",
+    color: "#0f172a",
+    border: "1px solid #e5e7eb",
+  },
+  success: {
+    iconTheme: {
+      primary: "#00b2f8",
+      secondary: "#fff",
+    },
+  },
+}}
+
+    />
   </StrictMode>,
 )
