@@ -246,9 +246,7 @@ export default function EventPaymentForm({
 
           {/* QR area */}
           <div className="rounded-xl bg-white px-3 py-3 border text-[11px] flex flex-col items-center">
-            <p className="font-semibold text-primary mb-2">
-              Scan QR with any UPI app
-            </p>
+           
 
             {/* Future: react-qr-code yaha use kar sakte ho */}
             <div className="rounded-xl bg-white px-3 py-3 border text-[11px] flex flex-col items-center">
@@ -277,10 +275,7 @@ export default function EventPaymentForm({
 </div>
 
 
-            <p className="mt-2 text-[10px] text-gray-500 text-center">
-              On desktop, open this page and scan the QR using your mobile UPI
-              app.
-            </p>
+           
           </div>
 
           {/* copy helpers */}
