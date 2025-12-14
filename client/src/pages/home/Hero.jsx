@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import img from "./src/public/images/hero.png";
 const Hero = () => {
   return (
